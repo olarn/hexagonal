@@ -1,5 +1,5 @@
-import { ExternalTaxRateRepository } from "./DrivenAdapters/ExternalTaxRateRepository";
-import { TaxCalculator } from "./TaxCalculatorApp/TaxCalculator/TaxCalculator";
+import { ExternalTaxRateRepository } from "../DrivenAdapters/ExternalTaxRateRepository";
+import { TaxCalculator } from "../TaxCalculatorApp/TaxCalculator/TaxCalculator";
 
 // Get command line arguments
 const args = process.argv.slice(2);
