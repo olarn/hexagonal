@@ -3,7 +3,7 @@ import { ForGettingTaxRate } from "../TaxCalculatorApp/DrivenPorts/ForGettingTax
 
 export class ExternalTaxRateRepository implements ForGettingTaxRate {
   taxRate(amount: number): number {
-    const taxRate = fs.readFileSync(__dirname + "/taxRate.json", "utf8");
+    const taxRate = fs.readFileSync(__dirname + "/../data/taxRate.json", "utf8");
     return JSON.parse(taxRate).taxRate;
   }
 }
