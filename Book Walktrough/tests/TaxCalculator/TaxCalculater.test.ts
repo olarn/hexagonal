@@ -2,7 +2,7 @@ import {
   ForCalculatingTax,
   ForGettingTaxRates,
   TaxCalculator
-} from "./TaxCalculater"
+} from "../../src/TaxCalculator/TaxCalculater"
 
 // Driving Adapter - in this case, it's a test case
 describe('Tax Calculator', () => {
