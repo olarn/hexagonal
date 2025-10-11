@@ -1,4 +1,4 @@
-import { ParkingTransaction } from "ParkingServices/ParkingServices/ParkingTransaction"
+import { ParkingTransaction } from "ParkingServices/App/ParkingTransaction"
 
 export interface ForParkingRepository {
   save(transaction: ParkingTransaction): string
