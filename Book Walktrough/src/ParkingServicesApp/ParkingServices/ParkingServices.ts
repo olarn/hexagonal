@@ -1,8 +1,8 @@
-import { ForAcceptParkingTransaction } from "ParkingServices/DrivingPorts/ForAcceptParkingTransaction"
+import { ForParkingLog } from "ParkingServicesApp/DrivenPorts/ForParkingLog"
+import { ForParkingRepository } from "ParkingServicesApp/DrivenPorts/ForParkingRepository"
+import { ForPaymentGateWay } from "ParkingServicesApp/DrivenPorts/ForPaymentGateWay"
+import { ForAcceptParkingTransaction } from "ParkingServicesApp/DrivingPorts/ForAcceptParkingTransaction"
 import { ParkingTransaction } from "./ParkingTransaction"
-import { ForParkingRepository } from "ParkingServices/DrivenPorts/ForParkingRepository"
-import { ForPaymentGateWay } from "ParkingServices/DrivenPorts/ForPaymentGateWay"
-import { ForParkingLog } from "ParkingServices/DrivenPorts/ForParkingLog"
 
 export class ParkingServices implements ForAcceptParkingTransaction {
   constructor(

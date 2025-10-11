@@ -1,10 +1,10 @@
-import { ForAcceptParkingTransaction } from "ParkingServices/DrivingPorts/ForAcceptParkingTransaction"
-import { ParkingTransaction }  from "../../src/ParkingServices/App/ParkingTransaction"
-import { PaymentPayload } from "../../src/ParkingServices/App/PaymentPayload"
-import { ParkingServices } from "../../src/ParkingServices/App/ParkingServices"
-import { ForParkingRepository } from "ParkingServices/DrivenPorts/ForParkingRepository"
-import { ForPaymentGateWay } from "ParkingServices/DrivenPorts/ForPaymentGateWay"
-import { ForParkingLog } from "ParkingServices/DrivenPorts/ForParkingLog"
+import { ForAcceptParkingTransaction } from "ParkingServicesApp/DrivingPorts/ForAcceptParkingTransaction"
+import { ParkingTransaction } from "../../src/ParkingServicesApp/ParkingServices/ParkingTransaction"
+import { ParkingServices } from "../../src/ParkingServicesApp/ParkingServices/ParkingServices"
+import { ForParkingRepository } from "ParkingServicesApp/DrivenPorts/ForParkingRepository"
+import { ForPaymentGateWay } from "ParkingServicesApp/DrivenPorts/ForPaymentGateWay"
+import { PaymentPayload } from "../../src/ParkingServicesApp/ParkingServices/PaymentPayload"
+import { ForParkingLog } from "ParkingServicesApp/DrivenPorts/ForParkingLog"
 
 describe('Parking Services', () => {
   it('should accept parking fee for 1 hour of choices.', () => {
