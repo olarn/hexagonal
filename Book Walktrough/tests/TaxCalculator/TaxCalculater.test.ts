@@ -1,8 +1,5 @@
-import {
-  TaxCalculator
-} from "../../src/TaxCalculator/App/TaxCalculater"
-import { ForGettingTaxRates } from "TaxCalculator/DrivenPorts/ForGettingTaxRates"
-import { ForCalculatingTax } from "TaxCalculator/DrivingPorts/ForCalculatingTax"
+import { TaxCalculator } from "../../src/TaxCalculatorApp/TaxCalculator/TaxCalculater"
+import { ForGettingTaxRates } from "TaxCalculatorApp/DrivenPorts/ForGettingTaxRates"
 
 // Driving Adapter - in this case, it's a test case
 describe('Tax Calculator', () => {
