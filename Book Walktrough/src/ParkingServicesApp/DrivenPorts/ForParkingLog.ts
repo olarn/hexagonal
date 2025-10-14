@@ -1,5 +1,4 @@
-import { ParkingTransaction } from "ParkingServices/App/ParkingTransaction"
-
+import { ParkingTransaction } from "ParkingServicesApp/ParkingServices/ParkingTransaction"
 export interface ForParkingLog {
   log(parkingTransaction: ParkingTransaction): string
 }
