@@ -3,18 +3,18 @@ import { ForParkingRepository } from "ParkingServicesApp/DrivenPorts/ForParkingR
 import { ForPaymentGateWay } from "ParkingServicesApp/DrivenPorts/ForPaymentGateWay"
 import { ForAcceptParkingTransaction } from "ParkingServicesApp/DrivingPorts/ForAcceptParkingTransaction"
 
-export type ParkingTransaction = {
+export type ParkingTransaction = Readonly<{
   plateNo: string
   parkingZone: string
   paymentPayload: PaymentPayload
-}
+}>
 
-export type PaymentPayload = {
+export type PaymentPayload = Readonly<{
   transaction: string
   cardNo: string
   expireDate: Date
   ccv: string
-}
+}>
 
 export class ParkingServices implements ForAcceptParkingTransaction {
   constructor(
