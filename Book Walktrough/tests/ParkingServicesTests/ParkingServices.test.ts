@@ -1,4 +1,4 @@
-import { ForAcceptParkingTransaction } from "ParkingServicesApp/DrivingPorts/ForAcceptParkingTransaction"
+import { ForAcceptParkingTransaction } from "../../src/ParkingServicesApp/DrivingPorts/ForAcceptParkingTransaction"
 import { ParkingTransaction } from "../../src/ParkingServicesApp/ParkingServices/ParkingTransaction"
 import { ParkingServices } from "../../src/ParkingServicesApp/ParkingServices/ParkingServices"
 import { MockParkingRepo } from "../../src/ParkingServiceDrivenAdapters/MockParkingRepo"
