@@ -20,7 +20,7 @@ describe('Parking Services', () => {
     const parkingService: ForAcceptParkingTransaction = new ParkingServices(
       mockParkingRepo,
       mockPaymentGateWay,
-      mockLog
+      mockSysLog
     )
 
     expect(
@@ -31,15 +31,7 @@ describe('Parking Services', () => {
   })
 })
 
-// -------------------------------------------- mock classes 
-
-const mockParkingRepo: ForParkingRepository = {
-  save: jest.fn().mockReturnValue('Transaction saved.')
-}
-const mockPaymentGateWay: ForPaymentGateWay = {
-  submit: jest.fn().mockReturnValue('Payment Success.')
-}
-const mockLog: ForParkingLog = {
-  write: jest.fn().mockReturnValue('Logged.')
-}
+const mockParkingRepo: ForParkingRepository = { save: jest.fn().mockReturnValue('Transaction saved.') }
+const mockPaymentGateWay: ForPaymentGateWay = { submit: jest.fn().mockReturnValue('Payment Success.') }
+const mockSysLog: ForParkingLog = { write: jest.fn().mockReturnValue('Logged.') }
 
