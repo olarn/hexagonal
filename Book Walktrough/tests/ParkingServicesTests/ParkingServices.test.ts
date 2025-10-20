@@ -1,9 +1,8 @@
 import { ForAcceptParkingTransaction } from "../../src/ParkingServicesApp/DrivingPorts/ForAcceptParkingTransaction"
-import { ParkingTransaction } from "../../src/ParkingServicesApp/ParkingServices/ParkingTransaction"
-import { ParkingServices } from "../../src/ParkingServicesApp/ParkingServices/ParkingServices"
-import { MockParkingRepo } from "../../src/ParkingServiceDrivenAdapters/MockParkingRepo"
-import { MockPaymentGateWay } from "../../src/ParkingServiceDrivenAdapters/MockPaymentGateWay"
-import { MockLog } from "../../src/ParkingServiceDrivenAdapters/MockLog"
+import { ParkingServices, ParkingTransaction } from "../../src/ParkingServicesApp/ParkingServices/ParkingServices"
+import { ForParkingRepository } from "../../src/ParkingServicesApp/DrivenPorts/ForParkingRepository"
+import { ForPaymentGateWay } from "../../src/ParkingServicesApp/DrivenPorts/ForPaymentGateWay"
+import { ForParkingLog } from "../../src/ParkingServicesApp/DrivenPorts/ForParkingLog"
 
 describe('Parking Services', () => {
   it('should accept parking fee for 1 hour of choices.', () => {
@@ -19,9 +18,9 @@ describe('Parking Services', () => {
     }
 
     const parkingService: ForAcceptParkingTransaction = new ParkingServices(
-      new MockParkingRepo(),
-      new MockPaymentGateWay(),
-      new MockLog()
+      mockParkingRepo,
+      mockPaymentGateWay,
+      mockLog
     )
 
     expect(
@@ -31,4 +30,16 @@ describe('Parking Services', () => {
     )
   })
 })
+
+// -------------------------------------------- mock classes 
+
+const mockParkingRepo: ForParkingRepository = {
+  save: jest.fn().mockReturnValue('Transaction saved.')
+}
+const mockPaymentGateWay: ForPaymentGateWay = {
+  submit: jest.fn().mockReturnValue('Payment Success.')
+}
+const mockLog: ForParkingLog = {
+  log: jest.fn().mockReturnValue('Logged.')
+}
 

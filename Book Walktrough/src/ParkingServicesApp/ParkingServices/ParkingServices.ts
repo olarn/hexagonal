@@ -2,7 +2,19 @@ import { ForParkingLog } from "ParkingServicesApp/DrivenPorts/ForParkingLog"
 import { ForParkingRepository } from "ParkingServicesApp/DrivenPorts/ForParkingRepository"
 import { ForPaymentGateWay } from "ParkingServicesApp/DrivenPorts/ForPaymentGateWay"
 import { ForAcceptParkingTransaction } from "ParkingServicesApp/DrivingPorts/ForAcceptParkingTransaction"
-import { ParkingTransaction } from "./ParkingTransaction"
+
+export type ParkingTransaction = {
+  plateNo: string
+  parkingZone: string
+  paymentPayload: PaymentPayload
+}
+
+export type PaymentPayload = {
+  transaction: string
+  cardNo: string
+  expireDate: Date
+  ccv: string
+}
 
 export class ParkingServices implements ForAcceptParkingTransaction {
   constructor(
