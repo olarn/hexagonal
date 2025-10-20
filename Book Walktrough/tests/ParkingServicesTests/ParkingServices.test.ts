@@ -40,6 +40,6 @@ const mockPaymentGateWay: ForPaymentGateWay = {
   submit: jest.fn().mockReturnValue('Payment Success.')
 }
 const mockLog: ForParkingLog = {
-  log: jest.fn().mockReturnValue('Logged.')
+  write: jest.fn().mockReturnValue('Logged.')
 }
 

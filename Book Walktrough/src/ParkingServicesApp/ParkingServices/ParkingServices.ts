@@ -20,13 +20,13 @@ export class ParkingServices implements ForAcceptParkingTransaction {
   constructor(
     private repository: ForParkingRepository,
     private paymentGateWay: ForPaymentGateWay,
-    private log: ForParkingLog
+    private syslog: ForParkingLog
   ) { }
 
   payFor(transaction: ParkingTransaction): string {
     const saveRepoResult = this.repository.save(transaction)
     const paymentResult = this.paymentGateWay.submit(transaction.paymentPayload)
-    const logResult = this.log.log(transaction)
+    const logResult = this.syslog.write(transaction)
     return `{"save": "${saveRepoResult}","pay": "${paymentResult}","log": "${logResult}"}`
   }
 }

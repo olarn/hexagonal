@@ -1,4 +1,4 @@
-import { ParkingTransaction } from "ParkingServices/App/ParkingTransaction"
+import { ParkingTransaction } from "../../ParkingServicesApp/ParkingServices/ParkingServices";
 
 export interface ForAcceptParkingTransaction {
   payFor(transaction: ParkingTransaction): string
